@@ -10,6 +10,7 @@ from collections import namedtuple, defaultdict
 import numpy as np
 import open3d
 import cv2
+import csv
 
 Points = namedtuple('Points', ['xyz', 'attr'])
 
@@ -381,12 +382,16 @@ class KittiDataset(object):
 
         Returns: a list of filenames.
         """
-
+        # modified so it can read Riley's .csv file and also remove duplicates
         file_list = []
-        with open(index_filename, 'r') as f:
+        with open(index_filename, 'r') as file:
+            f = csv.reader(file)
+            next(f)
             for line in f:
-                file_list.append(line.rstrip('\n').split('.')[0])
-        return file_list
+                file_list.append(line[0].rsplit('.')[0])
+        file_list_modified = []
+        [file_list_modified.append(x) for x in file_list if x not in file_list_modified]
+        return file_list_modified
 
     def _get_file_list(self, image_dir):
         """Load all filenames from image_dir.
@@ -419,18 +424,10 @@ class KittiDataset(object):
         """
 
         for f in file_list:
-            image_file = join(image_dir, f)+'.png'
-            point_file = join(point_dir, f)+'.bin'
-            label_file = join(label_dir, f)+'.txt'
-            calib_file = join(calib_dir, f)+'.txt'
+            image_file = join(image_dir, f)+'.npy'
+            point_file = join(point_dir, f)+'.npy'
             assert isfile(image_file), "Image %s does not exist" % image_file
             assert isfile(point_file), "Point %s does not exist" % point_file
-            if not is_raw:
-                assert isfile(calib_file), \
-                    "Calib %s does not exist" % calib_file
-            if is_training:
-                assert isfile(label_file), \
-                    "Label %s does not exist" % label_file
 
     def downsample_by_voxel(self, points, voxel_size, method='AVERAGE'):
         """Downsample point cloud by voxel.
@@ -488,15 +485,17 @@ class KittiDataset(object):
 
         Returns: a dictionary of calibrations.
         """
-
-        calib_file = join(self._calib_dir, self._file_list[frame_idx])+'.txt'
-        with open(calib_file, 'r') as f:
-            calib = {}
-            for line in f:
-                fields = line.split(' ')
-                matrix_name = fields[0].rstrip(':')
-                matrix = np.array(fields[1:], dtype=np.float32)
-                calib[matrix_name] = matrix
+        calib = {}
+        identity = np.hstack([np.eye(3,dtype=np.float32), np.zeros((3,1), dtype=np.float32)])
+        calib['P0'] = identity.flatten()
+        calib['P1'] = identity.flatten()
+        calib['P2'] = identity.flatten()
+        calib['P3'] = identity.flatten()
+        calib['R0_rect'] = np.eye(3,dtype=np.float32).flatten()
+        calib['Tr_velo_to_cam'] = identity.flatten()
+        calib['Tr_imu_to_velo'] = identity.flatten()
+        calib['\n'] = np.array([], dtype=np.float32)
+        
         calib['P2'] = calib['P2'].reshape(3, 4)
         calib['R0_rect'] = calib['R0_rect'].reshape(3,3)
         calib['Tr_velo_to_cam'] = calib['Tr_velo_to_cam'].reshape(3,4)
@@ -592,21 +591,32 @@ class KittiDataset(object):
 
         Returns: Points.
         """
-
-        point_file = join(self._point_dir, self._file_list[frame_idx])+'.bin'
-        velo_data = np.fromfile(point_file, dtype=np.float32).reshape(-1, 4)
+        # modified to take Riley's numpy files and also get rid of low energy points. Also note that the indices are (y,x,z), not (x,y,z)
+        point_file = join(self._point_dir, self._file_list[frame_idx])+'.npy'
+        ECAL_hits=np.load(point_file)
+        velo_data=np.zeros((ECAL_hits.size,4),dtype=np.float32)
+        veloIndex=0
+        for i in range(ECAL_hits.shape[0]):
+            for j in range(ECAL_hits.shape[1]):
+                for k in range(ECAL_hits.shape[2]):
+                    velo_data[veloIndex,(0,1,2)]=(j,i,k)
+                    velo_data[veloIndex,3]=ECAL_hits[i,j,k]
+                    veloIndex+=1
+        mask = abs(velo_data[:,3])>0
+        velo_data=velo_data[mask,:]
         velo_points = velo_data[:,:3]
         reflections = velo_data[:,[3]]
-        if xyz_range is not None:
-            x_range, y_range, z_range = xyz_range
-            mask =(
-                velo_points[:, 0] > x_range[0])*(velo_points[:, 0] < x_range[1])
-            mask *=(
-                velo_points[:, 1] > y_range[0])*(velo_points[:, 1] < y_range[1])
-            mask *=(
-                velo_points[:, 2] > z_range[0])*(velo_points[:, 2] < z_range[1])
-            return Points(xyz = velo_points[mask], attr = reflections[mask])
-        return Points(xyz = velo_points, attr = reflections)
+        reflections_scaled = np.abs((1/reflections.min())*reflections)
+        # if xyz_range is not None:
+        #    x_range, y_range, z_range = xyz_range
+        #    mask =(
+        #        velo_points[:, 0] > x_range[0])*(velo_points[:, 0] < x_range[1])
+        #    mask *=(
+        #        velo_points[:, 1] > y_range[0])*(velo_points[:, 1] < y_range[1])
+        #    mask *=(
+        #        velo_points[:, 2] > z_range[0])*(velo_points[:, 2] < z_range[1])
+        #    return Points(xyz = velo_points[mask], attr = reflections[mask])
+        return Points(xyz = velo_points, attr = reflections_scaled)
 
     def get_cam_points(self, frame_idx,
         downsample_voxel_size=None, calib=None, xyz_range=None):
@@ -667,25 +677,28 @@ class KittiDataset(object):
         downsample_voxel_size=None, calib=None, xyz_range=None):
         """Get camera points that are visible in image and append image color
         to the points as attributes."""
+        # modified to include all the points in the point cloud
         if calib is None:
             calib = self.get_calib(frame_idx)
         cam_points = self.get_cam_points(frame_idx, downsample_voxel_size,
             calib = calib, xyz_range=xyz_range)
-        front_cam_points_idx = cam_points.xyz[:,2] > 0.1
-        front_cam_points = Points(cam_points.xyz[front_cam_points_idx, :],
-            cam_points.attr[front_cam_points_idx, :])
+        #cam_points.xyz[:,2]+=0.000001
+        #front_cam_points_idx = cam_points.xyz[:,2] > -1
+        #front_cam_points = Points(cam_points.xyz[front_cam_points_idx, :],
+        #    cam_points.attr[front_cam_points_idx, :])
         image = self.get_image(frame_idx)
-        height = image.shape[0]
-        width = image.shape[1]
-        img_points = self.cam_points_to_image(front_cam_points, calib)
-        img_points_in_image_idx = np.logical_and.reduce(
-            [img_points.xyz[:,0]>0, img_points.xyz[:,0]<width,
-             img_points.xyz[:,1]>0, img_points.xyz[:,1]<height])
-        cam_points_in_img = Points(
-            xyz = front_cam_points.xyz[img_points_in_image_idx,:],
-            attr = front_cam_points.attr[img_points_in_image_idx,:])
-        cam_points_in_img_with_rgb = self.rgb_to_cam_points(cam_points_in_img,
+        #height = image.shape[0]
+        #width = image.shape[1]
+        #img_points = self.cam_points_to_image(front_cam_points, calib)
+        #img_points_in_image_idx = np.logical_and.reduce(
+        #    [img_points.xyz[:,0]>=0, img_points.xyz[:,0]<=width,
+        #     img_points.xyz[:,1]>=0, img_points.xyz[:,1]<=height])
+        #cam_points_in_img = Points(
+        #    xyz = front_cam_points.xyz[img_points_in_image_idx,:],
+        #    attr = front_cam_points.attr[img_points_in_image_idx,:])
+        cam_points_in_img_with_rgb = self.rgb_to_cam_points(cam_points,
             image, calib)
+        #cam_points_in_img_with_rgb.xyz[:,2]-=0.000001
         return cam_points_in_img_with_rgb
 
     def get_image(self, frame_idx):
@@ -696,9 +709,14 @@ class KittiDataset(object):
 
         Returns: cv2.matrix
         """
-
-        image_file = join(self._image_dir, self._file_list[frame_idx])+'.png'
-        return cv2.imread(image_file)
+        # modified to load Riley's .npy files as well as scale appropriately
+        image_file = join(self._image_dir, self._file_list[frame_idx])+'.npy'
+        image = np.load(image_file)
+        image_append = np.zeros((image.shape[0],image.shape[1],1))
+        new_image  = np.concatenate((image,image_append),axis=2)
+        new_image_scaled = (255/new_image.min())*new_image
+        new_image_scaled_int = new_image_scaled.astype('uint8')
+        return new_image_scaled_int
 
     def get_label(self, frame_idx, no_orientation=False):
         """Load bbox labels from frame_idx frame.
@@ -712,41 +730,50 @@ class KittiDataset(object):
         MIN_HEIGHT = [40, 25, 25]
         MAX_OCCLUSION = [0, 1, 2]
         MAX_TRUNCATION = [0.15, 0.3, 0.5]
-        label_file = join(self._label_dir, self._file_list[frame_idx])+'.txt'
+
+        # in our case the index_filename is the same as the label directory
+        label_file = self._index_filename
         label_list = []
-        with open(label_file, 'r') as f:
+        with open(label_file, 'r') as file:
+            f = csv.reader(file)
             for line in f:
                 label={}
-                line = line.strip()
-                if line == '':
+                # will have to modify this target file variable when switching. Unfortunately, we will have to name the label name as Car for now.
+                target_file = self._file_list[frame_idx] + '.npy'
+                if line[0] != target_file:
                     continue
-                fields = line.split(' ')
-                label['name'] = fields[0]
+                xmin = float(line[1])
+                xmax = float(line[2])
+                ymin = float(line[3])
+                ymax = float(line[4])
+                label['name'] = 'Car'
                 # 0=visible 1=partly occluded, 2=fully occluded, 3=unknown
-                label['truncation'] = float(fields[1])
-                label['occlusion'] = int(fields[2])
-                label['alpha'] =  float(fields[3])
-                label['xmin'] =  float(fields[4])
-                label['ymin'] =  float(fields[5])
-                label['xmax'] =  float(fields[6])
-                label['ymax'] =  float(fields[7])
-                label['height'] =  float(fields[8])
-                label['width'] =  float(fields[9])
-                label['length'] =  float(fields[10])
-                label['x3d'] =  float(fields[11])
-                label['y3d'] =  float(fields[12])
-                label['z3d'] =  float(fields[13])
-                label['yaw'] =  float(fields[14])
-                if len(fields) > 15:
-                    label['score'] =  float(fields[15])
-                if self.difficulty > -1:
-                    if label['truncation'] > MAX_TRUNCATION[self.difficulty]:
-                        continue
-                    if label['occlusion'] > MAX_OCCLUSION[self.difficulty]:
-                        continue
-                    if (label['ymax'] - label['ymin']
-                        ) < MIN_HEIGHT[self.difficulty]:
-                        continue
+                if ((xmin == 0.0) or (xmax == 48.0) or (ymin == 0.0) or (ymax == 48.0)):
+                    label['truncation'] = float(0.1)
+                else:
+                    label['truncation'] = float(0)
+                # Occlusion could be used to measure the extent to which clusters overlap
+                label['occlusion'] = float(0)
+                label['alpha'] =  float(0)
+                label['xmin'] =  float(xmin)
+                label['ymin'] =  float(ymin)
+                label['xmax'] =  float(xmax)
+                label['ymax'] =  float(ymax)
+                label['height'] =  float(ymax - ymin)
+                label['width'] =  float(1)
+                label['length'] =  float(xmax - xmin)
+                label['x3d'] =  float((xmax + xmin)/2)
+                label['y3d'] =  float((ymax + ymin)/2)
+                label['z3d'] =  float(0.5)
+                label['yaw'] =  float(0)
+                #if self.difficulty > -1:
+                #    if label['truncation'] > MAX_TRUNCATION[self.difficulty]:
+                #        continue
+                #    if label['occlusion'] > MAX_OCCLUSION[self.difficulty]:
+                #        continue
+                #    if (label['ymax'] - label['ymin']
+                #        ) < MIN_HEIGHT[self.difficulty]:
+                #        continue
                 label_list.append(label)
         return label_list
 
@@ -759,7 +786,7 @@ class KittiDataset(object):
         Returns: a numpy array [8, 3] representing the corners of the 3d box in
             camera coordinates.
         """
-
+        # I don't know what delta_h is for but I'm not using it
         yaw = label['yaw']
         R = np.array([[np.cos(yaw),  0,  np.sin(yaw)],
                       [0,            1,  0          ],
@@ -768,14 +795,14 @@ class KittiDataset(object):
         delta_h = h*(expend_factor[0]-1)
         w = label['width']*expend_factor[1]
         l = label['length']*expend_factor[2]
-        corners = np.array([[ l/2,  delta_h/2,  w/2],  # front up right
-                            [ l/2,  delta_h/2, -w/2],  # front up left
-                            [-l/2,  delta_h/2, -w/2],  # back up left
-                            [-l/2,  delta_h/2,  w/2],  # back up right
-                            [ l/2, -h-delta_h/2,  w/2],  # front down right
-                            [ l/2, -h-delta_h/2, -w/2],  # front down left
-                            [-l/2, -h-delta_h/2, -w/2],  # back down left
-                            [-l/2, -h-delta_h/2,  w/2]]) # back down right
+        corners = np.array([[ l/2,  h/2+delta_h/2,  w/2],  # front up right
+                            [ l/2,  h/2+delta_h/2, -w/2],  # front up left
+                            [-l/2,  h/2+delta_h/2, -w/2],  # back up left
+                            [-l/2,  h/2+delta_h/2,  w/2],  # back up right
+                            [ l/2, -h/2-delta_h/2,  w/2],  # front down right
+                            [ l/2, -h/2-delta_h/2, -w/2],  # front down left
+                            [-l/2, -h/2-delta_h/2, -w/2],  # back down left
+                            [-l/2, -h/2-delta_h/2,  w/2]]) # back down right
         r_corners = corners.dot(np.transpose(R))
         tx = label['x3d']
         ty = label['y3d']
@@ -978,12 +1005,12 @@ class KittiDataset(object):
 
         normals, lower, upper = self.box3d_to_normals(label, expend_factor)
         projected = np.matmul(xyz, np.transpose(normals))
-        points_in_x = np.logical_and(projected[:, 0] > lower[0],
-            projected[:, 0] < upper[0])
-        points_in_y = np.logical_and(projected[:, 1] > lower[1],
-            projected[:, 1] < upper[1])
-        points_in_z = np.logical_and(projected[:, 2] > lower[2],
-            projected[:, 2] < upper[2])
+        points_in_x = np.logical_and(projected[:, 0] >= lower[0],
+            projected[:, 0] <= upper[0])
+        points_in_y = np.logical_and(projected[:, 1] >= lower[1],
+            projected[:, 1] <= upper[1])
+        points_in_z = np.logical_and(projected[:, 2] >= lower[2],
+            projected[:, 2] <= upper[2])
         mask = np.logical_and.reduce((points_in_x, points_in_y, points_in_z))
         return mask
 
@@ -1043,13 +1070,14 @@ class KittiDataset(object):
                   a mask indicating points: a [N, 1] boolean numpy array.
         """
 
-        cam_points_xyz1 = np.hstack(
-            [points.xyz, np.ones([points.xyz.shape[0],1])])
-        img_points_xyz = np.matmul(
-            cam_points_xyz1, np.transpose(calib['cam_to_image']))
-        img_points_xy1 = img_points_xyz/img_points_xyz[:,[2]]
-        img_points = Points(img_points_xy1, points.attr)
-        return img_points
+        #cam_points_xyz1 = np.hstack(
+        #    [points.xyz, np.ones([points.xyz.shape[0],1])])
+        #img_points_xyz = np.matmul(
+        #    cam_points_xyz1, np.transpose(calib['cam_to_image']))
+        #img_points_xy1 = img_points_xyz/img_points_xyz[:,[2]]
+        #img_points = Points(img_points_xy1, points.attr)
+        #return img_points
+        return points
 
     def velo_points_to_image(self, points, calib):
         """Convert points from velodyne coordinates to image coordinates. Points
@@ -1187,7 +1215,7 @@ class KittiDataset(object):
         num_points = xyz.shape[0]
         assert num_points > 0, "No point No prediction"
         assert xyz.shape[1] == 3
-        # define label map
+        # define label map. In future we should try to change Car to cluster
         label_map = {
             'Background': 0,
             'Car': 1,

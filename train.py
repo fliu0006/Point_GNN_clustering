@@ -49,13 +49,24 @@ if 'train' in config_complete:
 else:
     config = config_complete
 # input function ==============================================================
+#dataset = KittiDataset(
+#    os.path.join(DATASET_DIR, 'image/training/image_2'),
+#    os.path.join(DATASET_DIR, 'velodyne/training/velodyne/'),
+#    os.path.join(DATASET_DIR, 'calib/training/calib/'),
+#    os.path.join(DATASET_DIR, 'labels/training/label_2'),
+#    DATASET_SPLIT_FILE,
+#    num_classes=config['num_classes'])
+
+# we've modified the initialisation of the dataset so it works for a simpler directory structure.
 dataset = KittiDataset(
-    os.path.join(DATASET_DIR, 'image/training/image_2'),
-    os.path.join(DATASET_DIR, 'velodyne/training/velodyne/'),
-    os.path.join(DATASET_DIR, 'calib/training/calib/'),
-    os.path.join(DATASET_DIR, 'labels/training/label_2'),
+    DATASET_DIR,
+    DATASET_DIR,
+    DATASET_DIR,
+    DATASET_DIR,
     DATASET_SPLIT_FILE,
     num_classes=config['num_classes'])
+
+
 NUM_CLASSES = dataset.num_classes
 
 if 'NUM_TEST_SAMPLE' not in train_config:
@@ -79,6 +90,11 @@ def fetch_data(frame_idx):
     cam_rgb_points = dataset.get_cam_points_in_image_with_rgb(frame_idx,
         config['downsample_by_voxel_size'])
     box_label_list = dataset.get_label(frame_idx)
+    # to test something, we are going to temporarily shift the z coordinate of all the boxes up by 20
+    #cam_rgb_points.xyz[:,2]+=20
+    #for i in range(len(box_label_list)):
+    #    box_label_list[i]['z3d']+=20
+
     if 'crop_aug' in train_config:
         cam_rgb_points, box_label_list = sampler.crop_aug(cam_rgb_points,
             box_label_list,
@@ -432,6 +448,7 @@ class DataProvider(object):
         self._async_load_rate = async_load_rate
         self._result_pool_limit = result_pool_limit
         if len(self._preload_list) > 0:
+            # breakpoint()
             self.preload(self._preload_list)
 
     def preload(self, frame_idx_list):
@@ -482,13 +499,15 @@ class DataProvider(object):
             batch_list.append(self.provide(frame_idx))
         return self._batch_data(batch_list)
 
+#breakpoint()
+#fetch_data(100)
+
 data_provider = DataProvider(fetch_data, batch_data,
     load_dataset_to_mem=train_config['load_dataset_to_mem'],
     load_dataset_every_N_time=train_config['load_dataset_every_N_time'],
     capacity=train_config['capacity'],
     num_workers=train_config['num_load_dataset_workers'],
     preload_list=list(range(NUM_TEST_SAMPLE)))
-
 
 # Training session ==========================================================
 batch_size = train_config.get('batch_size', 1)
@@ -522,6 +541,7 @@ with tf.Session(graph=graph,
         start_time = time.time()
         frame_idx_list = np.random.permutation(NUM_TEST_SAMPLE)
         for batch_idx in range(0, NUM_TEST_SAMPLE-batch_size+1, batch_size):
+            #breakpoint()
             mid_time = time.time()
             device_batch_size = batch_size//(COPY_PER_GPU*NUM_GPU)
             total_feed_dict = {}
@@ -574,6 +594,7 @@ with tf.Session(graph=graph,
                     batch_gradient_list = []
                 batch_ctr += 1
             else:
+                #breakpoint()
                 results = sess.run(fetches, feed_dict=total_feed_dict)
             if 'max_steps' in train_config and train_config['max_steps'] > 0:
                 if results['step'] >= train_config['max_steps']:

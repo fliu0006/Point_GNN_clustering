@@ -43,10 +43,10 @@ config = load_config(config_path)
 if 'eval' in config:
     config = config['eval']
 dataset = KittiDataset(
-    os.path.join(DATASET_DIR, 'image/training/image_2'),
-    os.path.join(DATASET_DIR, 'velodyne/training/velodyne/'),
-    os.path.join(DATASET_DIR, 'calib/training/calib/'),
-    os.path.join(DATASET_DIR, 'labels/training/label_2'),
+    DATASET_DIR,
+    DATASET_DIR,
+    DATASET_DIR,
+    DATASET_DIR,
     DATASET_SPLIT_FILE,
     num_classes=config['num_classes'])
 NUM_CLASSES = dataset.num_classes

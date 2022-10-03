@@ -1,0 +1,381 @@
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+batch size=4
+batch size=4
+batch size=4
+batch size=4
+batch size=4
+batch size=4
+batch size=4
+batch size=4
+batch size=4
+batch size=4
+batch size=4
+batch size=4
+batch size=4

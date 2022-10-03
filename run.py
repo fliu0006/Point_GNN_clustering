@@ -65,23 +65,24 @@ CHECKPOINT_PATH = args.checkpoint_path
 CONFIG_PATH = os.path.join(CHECKPOINT_PATH, 'config')
 assert os.path.isfile(CONFIG_PATH), 'No config file found in %s'
 config = load_config(CONFIG_PATH)
-# setup dataset ===============================================================
+# setup dataset, made some modifications to simplify directory structure ======
 if IS_TEST:
     dataset = KittiDataset(
-        os.path.join(DATASET_DIR, 'image/testing/image_2'),
-        os.path.join(DATASET_DIR, 'velodyne/testing/velodyne/'),
-        os.path.join(DATASET_DIR, 'calib/testing/calib/'),
+        DATASET_DIR,
+        DATASET_DIR,
+        DATASET_DIR,
         '',
         num_classes=config['num_classes'],
         is_training=False)
 else:
     dataset = KittiDataset(
-        os.path.join(DATASET_DIR, 'image/training/image_2'),
-        os.path.join(DATASET_DIR, 'velodyne/training/velodyne/'),
-        os.path.join(DATASET_DIR, 'calib/training/calib/'),
-        os.path.join(DATASET_DIR, 'labels/training/label_2'),
+        DATASET_DIR,
+        DATASET_DIR,
+        DATASET_DIR,
+        DATASET_DIR,
         DATASET_SPLIT_FILE,
         num_classes=config['num_classes'])
+
 NUM_TEST_SAMPLE = dataset.num_files
 NUM_CLASSES = dataset.num_classes
 # occlusion score =============================================================

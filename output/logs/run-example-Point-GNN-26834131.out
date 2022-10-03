@@ -1,0 +1,17 @@
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer4, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+Restore from checkpoint checkpoints/car_auto_T3_train/model-1400000
+fetch input time : 0.18957767242397228
+gen graph time : 0.1109093658865273
+gnn inference time : 0.15979771393937628
+decode box time : 0.002478376121854997
+nms time : 0.05747905761817938
+total time : 0.5222517915226225

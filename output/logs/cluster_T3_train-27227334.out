@@ -1,0 +1,1024 @@
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+@ level 0 Graph, Add layer: layer1, type: scatter_max_point_set_pooling
+Feature Dim:300
+@ level 1 Graph, Add layer: layer2, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+@ level 1 Graph, Add layer: layer3, type: scatter_max_graph_auto_center_net
+Feature Dim:300
+Final Feature Dim:300
+Prediction 4 classes
+(?, 1, 7)
+Set to unify copies in different GPU as if its a single copy
+batch size=4
+STEP: 24, epoch_idx: 0, lr: 0.010000, time cost: 73.830399
+cls:0.108138, loc:0.838674, reg:0.029534, loss: 0.976347
+Class_0: recall=0.997387, prec=0.566489, mAP=0.498399, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.000000, prec=0.000000, mAP=0.397839, loc=1459.795898
+         x=445.4029 y=434.2206 z=288.0686 l=98.4305 h=120.7925 w=30.8504 y=42.0304
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 0 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 48, epoch_idx: 1, lr: 0.010000, time cost: 40.319473
+cls:0.087447, loc:0.639368, reg:0.029535, loss: 0.756350
+Class_0: recall=0.995422, prec=0.555966, mAP=0.508298, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.000639, prec=0.100000, mAP=0.500277, loc=1243.947388
+         x=404.0540 y=398.5995 z=248.8771 l=91.1068 h=84.9739 w=11.4007 y=4.9354
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 1 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 72, epoch_idx: 2, lr: 0.010000, time cost: 40.799886
+cls:0.080632, loc:0.596440, reg:0.029535, loss: 0.706607
+Class_0: recall=0.968971, prec=0.554417, mAP=0.543810, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.009942, prec=0.201299, mAP=0.549072, loc=1165.760620
+         x=376.4098 y=388.5538 z=207.6623 l=87.1482 h=84.8828 w=14.1551 y=6.9488
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 2 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 96, epoch_idx: 3, lr: 0.010000, time cost: 41.626490
+cls:0.077342, loc:0.548881, reg:0.029536, loss: 0.655759
+Class_0: recall=0.921242, prec=0.568799, mAP=0.593882, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.118256, prec=0.543228, mAP=0.586118, loc=1118.528198
+         x=363.4971 y=398.6470 z=154.6883 l=91.7320 h=90.8574 w=13.5311 y=5.5753
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 3 to ./checkpoints/cluster_auto_T2_train/model
+batch size=4
+STEP: 24, epoch_idx: 0, lr: 0.010000, time cost: 75.489329
+cls:0.103634, loc:0.775915, reg:0.029556, loss: 0.909104
+Class_0: recall=0.998851, prec=0.534744, mAP=0.467004, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.000000, prec=0.000000, mAP=0.507373, loc=1543.352173
+         x=470.6772 y=461.1921 z=365.1804 l=112.0842 h=111.7321 w=13.7307 y=8.7555
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 0 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 48, epoch_idx: 1, lr: 0.010000, time cost: 41.131568
+cls:0.083398, loc:0.641193, reg:0.029557, loss: 0.754147
+Class_0: recall=0.963707, prec=0.555664, mAP=0.550838, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.046122, prec=0.506579, mAP=0.583049, loc=1258.387695
+         x=392.6212 y=381.7571 z=260.2724 l=100.1011 h=101.7525 w=15.4432 y=6.4403
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 1 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 72, epoch_idx: 2, lr: 0.010000, time cost: 41.800961
+cls:0.078505, loc:0.607736, reg:0.029557, loss: 0.715798
+Class_0: recall=0.936679, prec=0.570246, mAP=0.601661, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.146341, prec=0.656489, mAP=0.638425, loc=1233.979980
+         x=388.8263 y=384.6269 z=238.3569 l=94.1832 h=97.2484 w=20.1730 y=10.5653
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 2 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 96, epoch_idx: 3, lr: 0.010000, time cost: 41.337184
+cls:0.075748, loc:0.537807, reg:0.029557, loss: 0.643112
+Class_0: recall=0.933190, prec=0.571032, mAP=0.651049, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.174719, prec=0.689579, mAP=0.670343, loc=1060.626099
+         x=372.5610 y=329.7349 z=158.6895 l=95.3909 h=94.8214 w=6.0469 y=3.3814
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 3 to ./checkpoints/cluster_auto_T2_train/model
+batch size=4
+STEP: 24, epoch_idx: 0, lr: 0.010000, time cost: 76.240377
+cls:0.110825, loc:0.810259, reg:0.029557, loss: 0.950640
+Class_0: recall=0.241441, prec=0.621711, mAP=0.558719, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.720242, prec=0.464491, mAP=0.517930, loc=1600.500000
+         x=495.5336 y=461.5330 z=322.5992 l=160.4191 h=112.0684 w=43.1151 y=5.2316
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 0 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 48, epoch_idx: 1, lr: 0.010000, time cost: 42.336452
+cls:0.085445, loc:0.633747, reg:0.029557, loss: 0.748749
+Class_0: recall=0.883129, prec=0.540970, mAP=0.545825, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.119391, prec=0.465042, mAP=0.559516, loc=1325.465942
+         x=427.0596 y=427.6510 z=254.0178 l=97.4167 h=94.5427 w=22.9437 y=1.8344
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 1 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 72, epoch_idx: 2, lr: 0.010000, time cost: 42.957922
+cls:0.079185, loc:0.572615, reg:0.029558, loss: 0.681359
+Class_0: recall=0.886414, prec=0.540479, mAP=0.569833, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.145323, prec=0.530109, mAP=0.594804, loc=1233.895752
+         x=409.5127 y=399.0105 z=200.8537 l=103.0737 h=103.8737 w=15.2055 y=2.3659
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 2 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 96, epoch_idx: 3, lr: 0.010000, time cost: 41.340275
+cls:0.076102, loc:0.527062, reg:0.029560, loss: 0.632724
+Class_0: recall=0.840369, prec=0.570300, mAP=0.622028, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.252577, prec=0.572727, mAP=0.609259, loc=1062.167480
+         x=356.6510 y=342.9995 z=155.7360 l=99.1313 h=94.0551 w=11.3795 y=2.2151
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 3 to ./checkpoints/cluster_auto_T2_train/model
+batch size=4
+STEP: 24, epoch_idx: 0, lr: 0.010000, time cost: 79.218443
+cls:0.113919, loc:0.747519, reg:0.029565, loss: 0.891004
+Class_0: recall=0.978862, prec=0.531534, mAP=0.466626, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.001612, prec=0.117647, mAP=0.457815, loc=1555.145508
+         x=481.3829 y=474.5560 z=341.2727 l=116.7748 h=106.0029 w=9.7917 y=25.3646
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 0 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 48, epoch_idx: 1, lr: 0.010000, time cost: 41.003308
+cls:0.094186, loc:0.640412, reg:0.029566, loss: 0.764164
+Class_0: recall=0.934800, prec=0.550247, mAP=0.548086, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.016846, prec=0.167224, mAP=0.473637, loc=1271.957397
+         x=405.1227 y=395.5679 z=249.7900 l=81.0885 h=85.1176 w=16.7495 y=38.5210
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 1 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 72, epoch_idx: 2, lr: 0.010000, time cost: 41.807390
+cls:0.084616, loc:0.602152, reg:0.029567, loss: 0.716335
+Class_0: recall=0.908977, prec=0.552852, mAP=0.612201, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.075762, prec=0.398347, mAP=0.544195, loc=1223.330444
+         x=373.3270 y=373.1007 z=254.1967 l=85.2955 h=98.3053 w=17.6385 y=21.4667
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 2 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 96, epoch_idx: 3, lr: 0.010000, time cost: 41.628055
+cls:0.079829, loc:0.553261, reg:0.029567, loss: 0.662657
+Class_0: recall=0.842370, prec=0.590143, mAP=0.669921, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.222222, prec=0.514658, mAP=0.567366, loc=1125.582275
+         x=352.4779 y=343.6989 z=227.9035 l=84.1272 h=85.0537 w=13.8349 y=18.4861
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 3 to ./checkpoints/cluster_auto_T2_train/model
+batch size=4
+STEP: 24, epoch_idx: 0, lr: 0.010000, time cost: 81.525450
+cls:0.113062, loc:0.784330, reg:0.029558, loss: 0.926951
+Class_0: recall=0.846486, prec=0.544742, mAP=0.502922, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.038510, prec=0.377709, mAP=0.503347, loc=1521.318359
+         x=472.5904 y=462.1852 z=325.9714 l=110.2294 h=125.5534 w=10.9882 y=13.8004
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 0 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 48, epoch_idx: 1, lr: 0.010000, time cost: 42.413388
+cls:0.087638, loc:0.665634, reg:0.029559, loss: 0.782831
+Class_0: recall=0.739061, prec=0.562748, mAP=0.534324, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.279374, prec=0.460384, mAP=0.537644, loc=1378.307129
+         x=429.1837 y=418.7911 z=296.6526 l=106.1314 h=95.1308 w=22.0628 y=10.3548
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 1 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 72, epoch_idx: 2, lr: 0.010000, time cost: 42.372948
+cls:0.080143, loc:0.629590, reg:0.029560, loss: 0.739293
+Class_0: recall=0.679095, prec=0.579761, mAP=0.583032, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.410428, prec=0.516401, mAP=0.567983, loc=1330.971802
+         x=420.5703 y=400.6948 z=263.0332 l=109.8990 h=96.3546 w=25.7448 y=14.6749
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 2 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 96, epoch_idx: 3, lr: 0.010000, time cost: 40.232978
+cls:0.077152, loc:0.563571, reg:0.029560, loss: 0.670283
+Class_0: recall=0.634600, prec=0.618448, mAP=0.619167, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.481507, prec=0.498758, mAP=0.543109, loc=1085.403931
+         x=347.9705 y=328.5700 z=199.8495 l=92.8395 h=92.5549 w=14.8620 y=8.7575
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 3 to ./checkpoints/cluster_auto_T2_train/model
+batch size=4
+STEP: 24, epoch_idx: 0, lr: 0.010000, time cost: 76.907548
+cls:0.123773, loc:0.738338, reg:0.029555, loss: 0.891666
+Class_0: recall=0.990573, prec=0.553099, mAP=0.535396, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.000000, prec=0.000000, mAP=0.407909, loc=1563.968140
+         x=510.6104 y=468.1242 z=337.6157 l=110.3453 h=126.7295 w=8.2930 y=2.2502
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 0 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 48, epoch_idx: 1, lr: 0.010000, time cost: 42.896045
+cls:0.097662, loc:0.645579, reg:0.029555, loss: 0.772796
+Class_0: recall=1.000000, prec=0.527100, mAP=0.529565, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.000000, prec=0.000000, mAP=0.516097, loc=1402.325562
+         x=454.0921 y=439.4352 z=301.5535 l=95.8874 h=104.4674 w=2.9728 y=3.9172
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 1 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 72, epoch_idx: 2, lr: 0.010000, time cost: 44.827363
+cls:0.087382, loc:0.620907, reg:0.029556, loss: 0.737844
+Class_0: recall=0.997426, prec=0.547451, mAP=0.617107, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.000851, prec=0.214286, mAP=0.596276, loc=1400.284058
+         x=447.4546 y=449.6419 z=255.4930 l=113.3774 h=124.2571 w=5.4545 y=4.6056
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 2 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 96, epoch_idx: 3, lr: 0.010000, time cost: 42.155262
+cls:0.082332, loc:0.556152, reg:0.029556, loss: 0.668040
+Class_0: recall=0.994439, prec=0.527614, mAP=0.593463, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.004476, prec=0.418605, mAP=0.602954, loc=1154.708252
+         x=379.7029 y=386.7984 z=188.4764 l=92.9843 h=99.9850 w=3.2182 y=3.5430
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 3 to ./checkpoints/cluster_auto_T2_train/model
+batch size=4
+STEP: 24, epoch_idx: 0, lr: 0.010000, time cost: 84.403751
+cls:0.103882, loc:0.833902, reg:0.029526, loss: 0.967309
+Class_0: recall=1.000000, prec=0.548318, mAP=0.471009, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.000000, prec=0.000000, mAP=0.464057, loc=1492.352905
+         x=438.1622 y=459.8490 z=303.3541 l=103.6165 h=128.9012 w=44.6585 y=13.8112
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 0 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 48, epoch_idx: 1, lr: 0.010000, time cost: 43.283050
+cls:0.084390, loc:0.676486, reg:0.029526, loss: 0.790401
+Class_0: recall=0.999096, prec=0.545735, mAP=0.524089, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.000543, prec=0.333333, mAP=0.531844, loc=1443.201172
+         x=442.6164 y=479.3641 z=309.1342 l=100.8557 h=101.2579 w=7.0772 y=2.8957
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 1 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 72, epoch_idx: 2, lr: 0.010000, time cost: 40.693754
+cls:0.077190, loc:0.605610, reg:0.029527, loss: 0.712327
+Class_0: recall=0.965778, prec=0.544088, mAP=0.609720, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.040000, prec=0.496296, mAP=0.583330, loc=1177.334106
+         x=374.1477 y=383.7481 z=234.5510 l=83.7376 h=92.1135 w=7.5066 y=1.5294
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 2 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 96, epoch_idx: 3, lr: 0.010000, time cost: 39.892275
+cls:0.074125, loc:0.589520, reg:0.029527, loss: 0.693172
+Class_0: recall=0.901293, prec=0.561083, mAP=0.639433, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.147485, prec=0.552716, mAP=0.574308, loc=1127.365845
+         x=346.8031 y=372.9560 z=207.1297 l=89.2725 h=99.9608 w=7.7295 y=3.5141
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 3 to ./checkpoints/cluster_auto_T2_train/model
+batch size=4
+STEP: 24, epoch_idx: 0, lr: 0.010000, time cost: 85.053979
+cls:0.112407, loc:0.807841, reg:0.029549, loss: 0.949797
+Class_0: recall=0.003686, prec=0.882353, mAP=0.484337, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.999436, prec=0.467917, mAP=0.537544, loc=1616.417480
+         x=477.8067 y=479.1654 z=396.4890 l=122.6452 h=117.4512 w=14.3584 y=8.5016
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 0 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 48, epoch_idx: 1, lr: 0.010000, time cost: 42.937950
+cls:0.088574, loc:0.627916, reg:0.029550, loss: 0.746040
+Class_0: recall=0.103980, prec=0.644044, mAP=0.504043, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.928611, prec=0.454830, mAP=0.551921, loc=1327.745972
+         x=431.9609 y=435.3453 z=251.4990 l=95.6079 h=102.6074 w=8.6635 y=2.0620
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 1 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 72, epoch_idx: 2, lr: 0.010000, time cost: 40.905439
+cls:0.081065, loc:0.621026, reg:0.029550, loss: 0.731641
+Class_0: recall=0.583975, prec=0.566941, mAP=0.516925, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.468970, prec=0.486367, mAP=0.561903, loc=1238.830444
+         x=364.3029 y=385.9373 z=296.9770 l=91.2978 h=89.9528 w=7.1043 y=3.2583
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 2 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 96, epoch_idx: 3, lr: 0.010000, time cost: 39.766620
+cls:0.077625, loc:0.544397, reg:0.029551, loss: 0.651573
+Class_0: recall=0.780301, prec=0.564263, mAP=0.561794, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.239801, prec=0.463855, mAP=0.556111, loc=1025.575806
+         x=334.8232 y=354.3716 z=158.2628 l=80.6405 h=88.8135 w=5.6968 y=2.9676
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 3 to ./checkpoints/cluster_auto_T2_train/model
+batch size=4
+STEP: 24, epoch_idx: 0, lr: 0.010000, time cost: 87.513485
+cls:0.113406, loc:0.761458, reg:0.029543, loss: 0.904407
+Class_0: recall=0.765059, prec=0.500943, mAP=0.485100, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.053185, prec=0.197050, mAP=0.424362, loc=1574.018066
+         x=464.6282 y=474.8794 z=341.6562 l=126.7182 h=112.8362 w=22.1119 y=31.1879
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 0 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 48, epoch_idx: 1, lr: 0.010000, time cost: 39.734301
+cls:0.091245, loc:0.625260, reg:0.029544, loss: 0.746049
+Class_0: recall=0.813112, prec=0.521424, mAP=0.516364, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.069818, prec=0.230610, mAP=0.435819, loc=1187.510376
+         x=383.6393 y=389.3086 z=221.5968 l=93.9578 h=87.3490 w=6.5226 y=5.1365
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 1 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 72, epoch_idx: 2, lr: 0.010000, time cost: 41.723751
+cls:0.083800, loc:0.552717, reg:0.029544, loss: 0.666062
+Class_0: recall=0.779836, prec=0.508392, mAP=0.524434, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.129203, prec=0.336957, mAP=0.464671, loc=1099.171997
+         x=367.3683 y=355.9243 z=179.8708 l=90.4632 h=91.6458 w=5.4420 y=8.4576
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 2 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 96, epoch_idx: 3, lr: 0.010000, time cost: 41.389848
+cls:0.080573, loc:0.530614, reg:0.029545, loss: 0.640732
+Class_0: recall=0.785354, prec=0.515840, mAP=0.564860, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.121841, prec=0.322709, mAP=0.476425, loc=1074.860229
+         x=363.4610 y=341.2375 z=167.9564 l=97.7524 h=89.9338 w=6.0418 y=8.4774
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 3 to ./checkpoints/cluster_auto_T2_train/model
+batch size=4
+STEP: 24, epoch_idx: 0, lr: 0.010000, time cost: 81.880492
+cls:0.114820, loc:0.762436, reg:0.029539, loss: 0.906794
+Class_0: recall=0.000523, prec=1.000000, mAP=0.563772, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=1.000000, prec=0.421244, mAP=0.488524, loc=1503.262817
+         x=465.5107 y=452.9258 z=313.7245 l=130.5823 h=110.0258 w=18.5967 y=11.8971
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 0 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 48, epoch_idx: 1, lr: 0.010000, time cost: 43.417863
+cls:0.089731, loc:0.613718, reg:0.029540, loss: 0.732989
+Class_0: recall=0.116865, prec=0.756923, mAP=0.517256, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.955903, prec=0.479490, mAP=0.539283, loc=1285.165649
+         x=427.0147 y=395.0236 z=255.9817 l=97.3416 h=99.3259 w=4.4224 y=6.0556
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 1 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 72, epoch_idx: 2, lr: 0.010000, time cost: 41.644167
+cls:0.082240, loc:0.579213, reg:0.029540, loss: 0.690994
+Class_0: recall=0.440150, prec=0.620823, mAP=0.559784, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.659292, prec=0.481644, mAP=0.517869, loc=1113.590210
+         x=374.0635 y=391.6302 z=154.3027 l=88.1305 h=93.7866 w=5.1703 y=6.5064
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 2 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 96, epoch_idx: 3, lr: 0.010000, time cost: 42.421398
+cls:0.078727, loc:0.547375, reg:0.029541, loss: 0.655643
+Class_0: recall=0.544721, prec=0.623148, mAP=0.603279, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.571656, prec=0.491262, mAP=0.554378, loc=1091.052124
+         x=350.3466 y=380.0641 z=165.4332 l=85.7527 h=99.1519 w=4.5068 y=5.7969
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 3 to ./checkpoints/cluster_auto_T2_train/model
+batch size=4
+STEP: 24, epoch_idx: 0, lr: 0.010000, time cost: 85.171737
+cls:0.112782, loc:0.753391, reg:0.029549, loss: 0.895723
+Class_0: recall=0.122458, prec=0.681934, mAP=0.544228, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.858833, prec=0.465770, mAP=0.539170, loc=1497.156128
+         x=464.3276 y=464.9011 z=324.3116 l=123.0682 h=100.8405 w=6.8971 y=12.8100
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 0 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 48, epoch_idx: 1, lr: 0.010000, time cost: 43.313546
+cls:0.088406, loc:0.627580, reg:0.029550, loss: 0.745535
+Class_0: recall=0.500990, prec=0.585429, mAP=0.522366, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.566767, prec=0.481891, mAP=0.551323, loc=1312.128662
+         x=424.0986 y=420.6645 z=247.4871 l=106.3089 h=101.8200 w=5.9846 y=5.7648
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 1 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 72, epoch_idx: 2, lr: 0.010000, time cost: 41.803184
+cls:0.081553, loc:0.563813, reg:0.029551, loss: 0.674916
+Class_0: recall=0.705165, prec=0.562035, mAP=0.545415, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.318101, prec=0.465076, mAP=0.517372, loc=1100.156372
+         x=367.9806 y=360.2882 z=187.1129 l=89.7203 h=85.9099 w=5.1275 y=4.0169
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 2 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 96, epoch_idx: 3, lr: 0.010000, time cost: 43.260943
+cls:0.078259, loc:0.520994, reg:0.029551, loss: 0.628805
+Class_0: recall=0.704146, prec=0.578382, mAP=0.560845, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.386149, prec=0.521850, mAP=0.547901, loc=1091.379761
+         x=378.0779 y=347.3416 z=173.7942 l=91.9259 h=93.6823 w=3.5640 y=2.9939
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 3 to ./checkpoints/cluster_auto_T2_train/model
+batch size=4
+STEP: 24, epoch_idx: 0, lr: 0.010000, time cost: 87.232366
+cls:0.109827, loc:0.734993, reg:0.029514, loss: 0.874334
+Class_0: recall=0.678977, prec=0.543285, mAP=0.519527, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.233064, prec=0.500599, mAP=0.555245, loc=1473.677856
+         x=485.1271 y=435.4019 z=333.3349 l=109.7322 h=100.5806 w=2.7737 y=6.7277
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 0 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 48, epoch_idx: 1, lr: 0.010000, time cost: 42.179536
+cls:0.086849, loc:0.634285, reg:0.029515, loss: 0.750649
+Class_0: recall=0.792045, prec=0.577021, mAP=0.579174, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.280899, prec=0.521669, mAP=0.580129, loc=1279.780396
+         x=412.3374 y=417.4433 z=264.6979 l=85.6448 h=91.0052 w=3.3214 y=5.3303
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 1 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 72, epoch_idx: 2, lr: 0.010000, time cost: 42.216519
+cls:0.079944, loc:0.579999, reg:0.029515, loss: 0.689459
+Class_0: recall=0.765343, prec=0.604908, mAP=0.618992, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.390015, prec=0.576639, mAP=0.609662, loc=1176.228394
+         x=377.2898 y=385.7011 z=203.9251 l=88.7085 h=111.6419 w=4.7056 y=4.2564
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 2 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 96, epoch_idx: 3, lr: 0.010000, time cost: 42.547078
+cls:0.075987, loc:0.515207, reg:0.029516, loss: 0.620710
+Class_0: recall=0.794067, prec=0.626136, mAP=0.679368, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.411800, prec=0.617138, mAP=0.625574, loc=1054.307251
+         x=364.0229 y=367.4063 z=135.9933 l=89.3306 h=89.1162 w=4.8793 y=3.5585
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 3 to ./checkpoints/cluster_auto_T2_train/model
+batch size=4
+STEP: 24, epoch_idx: 0, lr: 0.010000, time cost: 83.929483
+cls:0.104204, loc:0.764149, reg:0.029547, loss: 0.897900
+Class_0: recall=0.151311, prec=0.689693, mAP=0.572425, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.907357, prec=0.463717, mAP=0.492930, loc=1445.469238
+         x=448.0071 y=447.4631 z=321.3291 l=107.2341 h=105.3240 w=10.1459 y=5.9658
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 0 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 48, epoch_idx: 1, lr: 0.010000, time cost: 42.729211
+cls:0.082214, loc:0.654446, reg:0.029547, loss: 0.766208
+Class_0: recall=0.613566, prec=0.547204, mAP=0.611667, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.378616, prec=0.444609, mAP=0.462564, loc=1355.126587
+         x=423.9589 y=426.1981 z=279.4356 l=118.5419 h=94.7656 w=8.7541 y=3.4726
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 1 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 72, epoch_idx: 2, lr: 0.010000, time cost: 42.519548
+cls:0.077713, loc:0.588988, reg:0.029548, loss: 0.696249
+Class_0: recall=0.690187, prec=0.539648, mAP=0.630396, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.263757, prec=0.405051, mAP=0.461710, loc=1205.329956
+         x=400.4484 y=383.9725 z=219.9280 l=98.9183 h=86.0947 w=10.0205 y=5.9476
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 2 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 96, epoch_idx: 3, lr: 0.010000, time cost: 43.943164
+cls:0.075219, loc:0.586289, reg:0.029549, loss: 0.691056
+Class_0: recall=0.753883, prec=0.541909, mAP=0.630824, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.244750, prec=0.456259, mAP=0.501274, loc=1263.002319
+         x=402.7394 y=387.2753 z=248.2200 l=107.3627 h=98.4127 w=12.2853 y=6.7068
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 3 to ./checkpoints/cluster_auto_T2_train/model
+batch size=4
+STEP: 24, epoch_idx: 0, lr: 0.010000, time cost: 84.608132
+cls:0.108222, loc:0.760168, reg:0.029520, loss: 0.897909
+Class_0: recall=0.202222, prec=0.589404, mAP=0.474551, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.829895, prec=0.490399, mAP=0.501484, loc=1477.850220
+         x=442.3926 y=480.3938 z=333.2490 l=95.4926 h=109.9308 w=9.1770 y=7.2144
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 0 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 48, epoch_idx: 1, lr: 0.010000, time cost: 42.385297
+cls:0.089777, loc:0.632041, reg:0.029520, loss: 0.751338
+Class_0: recall=0.608385, prec=0.548153, mAP=0.502571, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.348594, prec=0.406632, mAP=0.473581, loc=1274.152710
+         x=400.8146 y=433.7301 z=244.2280 l=89.0515 h=95.0430 w=5.6599 y=5.6257
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 1 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 72, epoch_idx: 2, lr: 0.010000, time cost: 41.665243
+cls:0.082588, loc:0.573134, reg:0.029521, loss: 0.685243
+Class_0: recall=0.830751, prec=0.545209, mAP=0.508218, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.137432, prec=0.394805, mAP=0.543439, loc=1114.615601
+         x=353.9004 y=379.3647 z=195.5821 l=85.7843 h=89.3980 w=6.0737 y=4.5124
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 2 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 96, epoch_idx: 3, lr: 0.010000, time cost: 41.902618
+cls:0.078816, loc:0.547034, reg:0.029521, loss: 0.655372
+Class_0: recall=0.908043, prec=0.564403, mAP=0.553271, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.130081, prec=0.532623, mAP=0.579906, loc=1082.201904
+         x=342.3029 y=365.2317 z=184.8356 l=83.9388 h=92.1544 w=6.8035 y=6.9349
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 3 to ./checkpoints/cluster_auto_T2_train/model
+batch size=4
+STEP: 24, epoch_idx: 0, lr: 0.010000, time cost: 87.178756
+cls:0.125246, loc:0.839711, reg:0.029536, loss: 0.994493
+Class_0: recall=0.822481, prec=0.548948, mAP=0.544870, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.000000, prec=0.000000, mAP=0.481110, loc=1833.597168
+         x=533.2530 y=527.0165 z=334.8265 l=267.5652 h=126.8872 w=6.2398 y=37.8087
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 0 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 48, epoch_idx: 1, lr: 0.010000, time cost: 42.990364
+cls:0.103691, loc:0.674823, reg:0.029537, loss: 0.808051
+Class_0: recall=1.000000, prec=0.541899, mAP=0.558620, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.000000, prec=0.000000, mAP=0.553127, loc=1434.919434
+         x=452.8698 y=469.2780 z=272.4252 l=98.5165 h=105.6039 w=28.4194 y=7.8065
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 1 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 72, epoch_idx: 2, lr: 0.010000, time cost: 41.234967
+cls:0.092327, loc:0.563801, reg:0.029538, loss: 0.685666
+Class_0: recall=1.000000, prec=0.555497, mAP=0.618544, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.000000, prec=0.000000, mAP=0.603005, loc=1135.526611
+         x=365.1531 y=361.7727 z=208.9987 l=85.7217 h=96.6744 w=10.3355 y=6.8706
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 2 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 96, epoch_idx: 3, lr: 0.010000, time cost: 43.043551
+cls:0.085903, loc:0.579790, reg:0.029538, loss: 0.695232
+Class_0: recall=0.998073, prec=0.531010, mAP=0.608007, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.007592, prec=0.777778, mAP=0.654852, loc=1274.063354
+         x=425.2169 y=383.5104 z=235.5325 l=98.7146 h=100.6925 w=19.5183 y=10.8780
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 3 to ./checkpoints/cluster_auto_T2_train/model
+batch size=4
+STEP: 24, epoch_idx: 0, lr: 0.010000, time cost: 88.544714
+cls:0.126020, loc:0.763707, reg:0.029539, loss: 0.919266
+Class_0: recall=0.754498, prec=0.526603, mAP=0.466315, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.000559, prec=0.076923, mAP=0.432986, loc=1621.500000
+         x=482.9136 y=502.2257 z=351.9081 l=122.6308 h=147.4435 w=6.6134 y=7.7648
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 0 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 48, epoch_idx: 1, lr: 0.010000, time cost: 44.301435
+cls:0.095841, loc:0.663549, reg:0.029539, loss: 0.788929
+Class_0: recall=0.944036, prec=0.542962, mAP=0.479940, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.024170, prec=0.260188, mAP=0.497054, loc=1270.642212
+         x=384.8817 y=401.3890 z=261.5347 l=112.3171 h=90.7372 w=8.7532 y=11.0290
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 1 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 72, epoch_idx: 2, lr: 0.010000, time cost: 45.338773
+cls:0.085279, loc:0.595194, reg:0.029540, loss: 0.710014
+Class_0: recall=0.941944, prec=0.548764, mAP=0.498002, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.045128, prec=0.386699, mAP=0.535259, loc=1188.693726
+         x=366.7987 y=382.8258 z=246.7607 l=94.3417 h=85.3726 w=6.3688 y=6.2255
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 2 to ./checkpoints/cluster_auto_T2_train/model
+STEP: 96, epoch_idx: 3, lr: 0.010000, time cost: 45.005551
+cls:0.080078, loc:0.545615, reg:0.029540, loss: 0.655234
+Class_0: recall=0.912581, prec=0.559082, mAP=0.554135, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_1: recall=0.113390, prec=0.512887, mAP=0.555455, loc=1132.585938
+         x=347.0681 y=353.2642 z=217.8286 l=106.7498 h=94.2220 w=4.9019 y=8.5514
+Class_2: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+Class_3: recall=0.000000, prec=0.000000, mAP=0.000000, loc=0.000000
+         x=0.0000 y=0.0000 z=0.0000 l=0.0000 h=0.0000 w=0.0000 y=0.0000
+save checkpoint at step 3 to ./checkpoints/cluster_auto_T2_train/model
