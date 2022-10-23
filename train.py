@@ -87,8 +87,10 @@ if 'crop_aug' in train_config:
     sampler = CropAugSampler(train_config['crop_aug']['crop_filename'])
 
 def fetch_data(frame_idx):
-    cam_rgb_points = dataset.get_cam_points_in_image_with_rgb(frame_idx,
-        config['downsample_by_voxel_size'])
+    if 'irregular_geometry' in config:
+        cam_rgb_points = dataset.get_cam_points_in_image_with_rgb(frame_idx, config['downsample_by_voxel_size'], irregular_geometry=config['irregular_geometry'])
+    else:
+        cam_rgb_points = dataset.get_cam_points_in_image_with_rgb(frame_idx, config['downsample_by_voxel_size'])
     box_label_list = dataset.get_label(frame_idx)
     # to test something, we are going to temporarily shift the z coordinate of all the boxes up by 20
     #cam_rgb_points.xyz[:,2]+=20
@@ -435,7 +437,7 @@ class DataProvider(object):
     """
     def __init__(self, fetch_data, batch_data, load_dataset_to_mem=True,
         load_dataset_every_N_time=1, capacity=1, num_workers=1, preload_list=[],
-        async_load_rate=1.0, result_pool_limit=10000):
+        async_load_rate=1.0, result_pool_limit=1000000):
         self._fetch_data = fetch_data
         self._batch_data = batch_data
         self._buffer = {}
@@ -500,7 +502,7 @@ class DataProvider(object):
         return self._batch_data(batch_list)
 
 #breakpoint()
-#fetch_data(100)
+#fetch_data(0)
 
 data_provider = DataProvider(fetch_data, batch_data,
     load_dataset_to_mem=train_config['load_dataset_to_mem'],
@@ -598,6 +600,7 @@ with tf.Session(graph=graph,
                 results = sess.run(fetches, feed_dict=total_feed_dict)
             if 'max_steps' in train_config and train_config['max_steps'] > 0:
                 if results['step'] >= train_config['max_steps']:
+                    breakpoint()
                     checkpoint_path = os.path.join(train_config['train_dir'],
                         train_config['checkpoint_path'])
                     config_path = os.path.join(train_config['train_dir'],

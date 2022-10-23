@@ -1,0 +1,5 @@
+model_checkpoint_path: "model-120208"
+all_model_checkpoint_paths: "model-30052"
+all_model_checkpoint_paths: "model-60104"
+all_model_checkpoint_paths: "model-90156"
+all_model_checkpoint_paths: "model-120208"

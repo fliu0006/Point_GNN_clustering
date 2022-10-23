@@ -22,6 +22,42 @@ from models import nms
 from util.config_util import load_config, load_train_config
 from util.summary_util import write_summary_scale
 
+#intersection over union function
+def intersection_over_union(gt_box, pred_box):
+    inter_box_top_left = [max(gt_box[0], pred_box[0]), max(gt_box[1], pred_box[1])]
+    inter_box_bottom_right = [min(gt_box[0]+gt_box[2], pred_box[0]+pred_box[2]), min(gt_box[1]+gt_box[3], pred_box[1]+pred_box[3])]
+    inter_box_w = inter_box_bottom_right[0] - inter_box_top_left[0]
+    inter_box_h = inter_box_bottom_right[1] - inter_box_top_left[1]
+    if inter_box_w<0 or inter_box_h<0:
+        return 0.0
+    intersection = inter_box_w * inter_box_h
+    union = gt_box[2] * gt_box[3] + pred_box[2] * pred_box[3] - intersection
+    iou = intersection / union
+    return iou
+
+#function to calculate precision recall curve values as well as the average precision
+def precision_recall_curve(IoU, thresholds, total_instances, Confidence_scores, IoU_threshold):
+    precisions = []
+    recalls = []
+    mask = np.array(IoU) > IoU_threshold
+    Confidence_scores = np.array(Confidence_scores)
+    Confidence_scores_scaled = Confidence_scores/np.max(Confidence_scores)
+    for threshold in thresholds:
+        mask2 = Confidence_scores_scaled >= threshold
+        possible_predictions = mask[mask2]
+        True_positives = np.sum(possible_predictions)
+        precision = True_positives/len(possible_predictions)
+        recall = True_positives/total_instances
+        precisions.append(precision)
+        recalls.append(recall)
+    #calculating average precision
+    precisions.append(1)
+    recalls.append(0)
+    precisions = np.array(precisions)
+    recalls = np.array(recalls)
+    AP = np.sum((recalls[:-1] - recalls[1:]) * precisions[:-1])
+    return precisions, recalls, AP
+
 parser = argparse.ArgumentParser(description='Point-GNN inference on KITTI')
 parser.add_argument('checkpoint_path', type=str,
                    help='Path to checkpoint')
@@ -189,6 +225,11 @@ gt_color_map = {
     'Cyclist': (255,165,0),
 }
 # runing network ==============================================================
+#seting up the IoU scores variable which will eventually be used to calculate the precision recall values
+IoU_total = []
+Confidence_scores = []
+NUM_CLUSTERS = 0
+
 time_dict = {}
 saver = tf.train.Saver()
 graph = tf.get_default_graph()
@@ -208,8 +249,10 @@ with tf.Session(graph=graph,
             line_set = open3d.LineSet()
             graph_line_set = open3d.LineSet()
         # provide input ======================================================
-        cam_rgb_points = dataset.get_cam_points_in_image_with_rgb(frame_idx,
-            config['downsample_by_voxel_size'])
+        if 'irregular_geometry' in config:
+            cam_rgb_points = dataset.get_cam_points_in_image_with_rgb(frame_idx,config['downsample_by_voxel_size'],irregular_geometry=config['irregular_geometry'])
+        else:
+            cam_rgb_points = dataset.get_cam_points_in_image_with_rgb(frame_idx,config['downsample_by_voxel_size'])
         calib = dataset.get_calib(frame_idx)
         image = dataset.get_image(frame_idx)
         if not IS_TEST:
@@ -362,6 +405,7 @@ with tf.Session(graph=graph,
             detection_boxes_3d_corners = nms.boxes_3d_to_corners(
                 detection_boxes_3d)
             pred_labels = []
+            #frame_confidence_scores=[]
             for i in range(len(detection_boxes_3d_corners)):
                 detection_box_3d_corners = detection_boxes_3d_corners[i]
                 corners_cam_points = Points(
@@ -404,6 +448,11 @@ with tf.Session(graph=graph,
                     points_inside = last_layer_points_xyz[
                         box_indices][inside_mask]
                     score_inside = box_probs_ori[inside_mask]
+                    #taking the max probability prediction of the individual nodes within the box
+                    #if len(score_inside)>0:
+                    #    frame_confidence_scores.append(np.mean(score_inside))
+                    #else:
+                    #    frame_confidence_scores.append(0.5)
                     score = (1+occlusion(tmp_label, points_inside))*score
                 pred_labels.append((class_name, -1, -1, 0,
                     clip_xmin, clip_ymin, clip_xmax, clip_ymax,
@@ -537,5 +586,48 @@ with tf.Session(graph=graph,
         total_time = time.time()
         time_dict['total'] = time_dict.get('total', 0) \
             + total_time - start_time
+        # seeing what some variables are
+        #breakpoint()
+        # calculation of IoUs for all predicted clusters and counting number of clusters in the image
+        NUM_CLUSTERS+=len(box_label_list)
+        GT_boxes=[]
+        predicted_boxes=[]
+        predicted_boxes_confidence=[]
+        for cluster in box_label_list:
+            x_minimum=cluster['xmin']
+            y_minimum=cluster['ymin']
+            box_length=cluster['length']
+            box_height=cluster['height']
+            GT_boxes.append([x_minimum,y_minimum,box_length,box_height])
+        for cluster in pred_labels:
+            x_minimum=cluster[4]
+            y_minimum=cluster[5]
+            box_length=cluster[6]-cluster[4]
+            box_height=cluster[7]-cluster[5]
+            predicted_boxes.append([x_minimum,y_minimum,box_length,box_height])
+            predicted_boxes_confidence.append(cluster[15])
+        # now need to sort the predicted boxes in descending order of confidence
+        predicted_boxes_sorted = [x for _,x in sorted(zip(predicted_boxes_confidence,predicted_boxes),reverse=True)]
+        confidence_scores_sorted = sorted(predicted_boxes_confidence,reverse=True)
+        for score_idx in confidence_scores_sorted:
+            Confidence_scores.append(score_idx)
+        for predicted_cluster in predicted_boxes_sorted:
+            IoU_temporary=[]
+            if len(GT_boxes)>0:
+                for true_cluster in GT_boxes:
+                    IoU_temporary.append(intersection_over_union(true_cluster, predicted_cluster))
+                max_IoU = max(IoU_temporary)
+                max_IoU_index = IoU_temporary.index(max_IoU)
+                IoU_total.append(max_IoU)
+                del GT_boxes[max_IoU_index]
+            else:
+                IoU_total.append(0.0)
+    #breakpoint()
     for key in time_dict:
         print(key + " time : " + str(time_dict[key]/NUM_TEST_SAMPLE))
+
+# generating the precision recall curve and calculating the mean average precision
+precision_array, recall_array, average_precision = precision_recall_curve(IoU_total, np.linspace(0,1,1001), NUM_CLUSTERS, Confidence_scores, 0.35)
+print("average precision : " + str(average_precision))
+np.save(OUTPUT_DIR + "/data/" + "precision_array", precision_array)
+np.save(OUTPUT_DIR + "/data/" + "recall_array", recall_array)

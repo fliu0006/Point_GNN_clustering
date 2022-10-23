@@ -66,8 +66,10 @@ box_decoding_fn = get_box_decoding_fn(config['box_encoding_method'])
 
 aug_fn = preprocess.get_data_aug(eval_config['data_aug_configs'])
 def fetch_data(frame_idx):
-    cam_rgb_points = dataset.get_cam_points_in_image_with_rgb(frame_idx,
-        config['downsample_by_voxel_size'])
+    if 'irregular_geometry' in config:
+        cam_rgb_points = dataset.get_cam_points_in_image_with_rgb(frame_idx,config['downsample_by_voxel_size'], irregular_geometry=config['irregular_geometry'])
+    else:
+        cam_rgb_points = dataset.get_cam_points_in_image_with_rgb(frame_idx,config['downsample_by_voxel_size'])
     box_label_list = dataset.get_label(frame_idx)
     cam_rgb_points, box_label_list = aug_fn(cam_rgb_points, box_label_list)
     graph_generate_fn= get_graph_generate_fn(config['graph_gen_method'])
@@ -260,7 +262,7 @@ class DataProvider(object):
     reloaded for the randomness to take effect.
     """
     def __init__(self, fetch_data, load_dataset_to_mem=True,
-        load_dataset_every_N_time=1, capacity=1):
+        load_dataset_every_N_time=1, capacity=16):
         self._fetch_data = fetch_data
         self._loaded_data_dic = {}
         self._loaded_data_ctr_dic = {}

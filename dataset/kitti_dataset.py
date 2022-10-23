@@ -153,12 +153,12 @@ def sel_xyz_in_box3d(label, xyz, expend_factor=(1.0, 1.0, 1.0)):
 
     normals, lower, upper = box3d_to_normals(label, expend_factor)
     projected = np.matmul(xyz, np.transpose(normals))
-    points_in_x = np.logical_and(projected[:, 0] > lower[0],
-        projected[:, 0] < upper[0])
-    points_in_y = np.logical_and(projected[:, 1] > lower[1],
-        projected[:, 1] < upper[1])
-    points_in_z = np.logical_and(projected[:, 2] > lower[2],
-        projected[:, 2] < upper[2])
+    points_in_x = np.logical_and(projected[:, 0] >= lower[0],
+        projected[:, 0] <= upper[0])
+    points_in_y = np.logical_and(projected[:, 1] >= lower[1],
+        projected[:, 1] <= upper[1])
+    points_in_z = np.logical_and(projected[:, 2] >= lower[2],
+        projected[:, 2] <= upper[2])
     mask = np.logical_and.reduce((points_in_x, points_in_y, points_in_z))
     return mask
 
@@ -583,7 +583,7 @@ class KittiDataset(object):
         """
         return self._file_list[frame_idx]
 
-    def get_velo_points(self, frame_idx, xyz_range=None):
+    def get_velo_points(self, frame_idx, xyz_range=None, irregular_geometry=False):
         """Load velo points from frame_idx.
 
         Args:
@@ -592,6 +592,7 @@ class KittiDataset(object):
         Returns: Points.
         """
         # modified to take Riley's numpy files and also get rid of low energy points. Also note that the indices are (y,x,z), not (x,y,z)
+        # also trying out taking log of intensities
         point_file = join(self._point_dir, self._file_list[frame_idx])+'.npy'
         ECAL_hits=np.load(point_file)
         velo_data=np.zeros((ECAL_hits.size,4),dtype=np.float32)
@@ -602,24 +603,34 @@ class KittiDataset(object):
                     velo_data[veloIndex,(0,1,2)]=(j,i,k)
                     velo_data[veloIndex,3]=ECAL_hits[i,j,k]
                     veloIndex+=1
+        if irregular_geometry:
+            mask = np.logical_and(velo_data[:,0]<24, velo_data[:,1]<24)
+            coarse_velo_data = velo_data[mask,:]
+            fine_velo_data = velo_data[np.logical_not(mask),:]
+            coarse_velo_processed = np.zeros((int(coarse_velo_data.shape[0]/4),4),dtype=np.float32)
+            process_idx = 0
+            for k in range(2):
+                for j in range(12):
+                    for i in range(12):
+                        p1 = coarse_velo_data[4*i + 96*j + k, 3]
+                        p2 = coarse_velo_data[4*i + 96*j + k + 2, 3]
+                        p3 = coarse_velo_data[4*i + 96*j + k + 48, 3]
+                        p4 = coarse_velo_data[4*i + 96*j + k + 50, 3]
+                        coarse_velo_processed[process_idx,(0,1,2)]=(2*i + 0.5, 2*j + 0.5 ,k)
+                        coarse_velo_processed[process_idx,3]= np.mean([p1,p2,p3,p4])
+                        process_idx+=1
+            velo_data = np.concatenate((coarse_velo_processed, fine_velo_data), axis=0)
         mask = abs(velo_data[:,3])>0
         velo_data=velo_data[mask,:]
         velo_points = velo_data[:,:3]
-        reflections = velo_data[:,[3]]
-        reflections_scaled = np.abs((1/reflections.min())*reflections)
-        # if xyz_range is not None:
-        #    x_range, y_range, z_range = xyz_range
-        #    mask =(
-        #        velo_points[:, 0] > x_range[0])*(velo_points[:, 0] < x_range[1])
-        #    mask *=(
-        #        velo_points[:, 1] > y_range[0])*(velo_points[:, 1] < y_range[1])
-        #    mask *=(
-        #        velo_points[:, 2] > z_range[0])*(velo_points[:, 2] < z_range[1])
-        #    return Points(xyz = velo_points[mask], attr = reflections[mask])
+        reflections = np.abs(velo_data[:,[3]])
+        #reflections_log = np.log(np.abs(reflections))
+        #reflections_scaled = (reflections_log-np.min(reflections_log))/(np.max(reflections_log)-np.min(reflections_log))
+        reflections_scaled = (reflections-np.min(reflections))/(np.max(reflections)-np.min(reflections))
         return Points(xyz = velo_points, attr = reflections_scaled)
 
     def get_cam_points(self, frame_idx,
-        downsample_voxel_size=None, calib=None, xyz_range=None):
+        downsample_voxel_size=None, calib=None, xyz_range=None, irregular_geometry=False):
         """Load velo points and convert them to camera coordinates.
 
         Args:
@@ -627,7 +638,10 @@ class KittiDataset(object):
 
         Returns: Points.
         """
-        velo_points = self.get_velo_points(frame_idx, xyz_range=xyz_range)
+        if irregular_geometry:
+            velo_points = self.get_velo_points(frame_idx, xyz_range=xyz_range, irregular_geometry=True)
+        else:
+            velo_points = self.get_velo_points(frame_idx, xyz_range=xyz_range)
         if calib is None:
             calib = self.get_calib(frame_idx)
         cam_points = self.velo_points_to_cam(velo_points, calib)
@@ -674,14 +688,17 @@ class KittiDataset(object):
         return cam_points_in_img
 
     def get_cam_points_in_image_with_rgb(self, frame_idx,
-        downsample_voxel_size=None, calib=None, xyz_range=None):
+        downsample_voxel_size=None, calib=None, xyz_range=None, irregular_geometry=False):
         """Get camera points that are visible in image and append image color
         to the points as attributes."""
         # modified to include all the points in the point cloud
         if calib is None:
             calib = self.get_calib(frame_idx)
-        cam_points = self.get_cam_points(frame_idx, downsample_voxel_size,
-            calib = calib, xyz_range=xyz_range)
+
+        if irregular_geometry:
+            cam_points = self.get_cam_points(frame_idx, downsample_voxel_size, calib = calib, xyz_range=xyz_range, irregular_geometry=True)
+        else:
+            cam_points = self.get_cam_points(frame_idx, downsample_voxel_size, calib = calib, xyz_range=xyz_range)
         #cam_points.xyz[:,2]+=0.000001
         #front_cam_points_idx = cam_points.xyz[:,2] > -1
         #front_cam_points = Points(cam_points.xyz[front_cam_points_idx, :],
@@ -763,7 +780,8 @@ class KittiDataset(object):
                 label['width'] =  float(1)
                 label['length'] =  float(xmax - xmin)
                 label['x3d'] =  float((xmax + xmin)/2)
-                label['y3d'] =  float((ymax + ymin)/2)
+                #the y3d may actually be the top of the box so I'm going to test if that works
+                label['y3d'] =  float(ymax)
                 label['z3d'] =  float(0.5)
                 label['yaw'] =  float(0)
                 #if self.difficulty > -1:
@@ -795,14 +813,14 @@ class KittiDataset(object):
         delta_h = h*(expend_factor[0]-1)
         w = label['width']*expend_factor[1]
         l = label['length']*expend_factor[2]
-        corners = np.array([[ l/2,  h/2+delta_h/2,  w/2],  # front up right
-                            [ l/2,  h/2+delta_h/2, -w/2],  # front up left
-                            [-l/2,  h/2+delta_h/2, -w/2],  # back up left
-                            [-l/2,  h/2+delta_h/2,  w/2],  # back up right
-                            [ l/2, -h/2-delta_h/2,  w/2],  # front down right
-                            [ l/2, -h/2-delta_h/2, -w/2],  # front down left
-                            [-l/2, -h/2-delta_h/2, -w/2],  # back down left
-                            [-l/2, -h/2-delta_h/2,  w/2]]) # back down right
+        corners = np.array([[ l/2,  delta_h/2,  w/2],  # front up right
+                            [ l/2,  delta_h/2, -w/2],  # front up left
+                            [-l/2,  delta_h/2, -w/2],  # back up left
+                            [-l/2,  delta_h/2,  w/2],  # back up right
+                            [ l/2, -h-delta_h/2,  w/2],  # front down right
+                            [ l/2, -h-delta_h/2, -w/2],  # front down left
+                            [-l/2, -h-delta_h/2, -w/2],  # back down left
+                            [-l/2, -h-delta_h/2,  w/2]]) # back down right
         r_corners = corners.dot(np.transpose(R))
         tx = label['x3d']
         ty = label['y3d']

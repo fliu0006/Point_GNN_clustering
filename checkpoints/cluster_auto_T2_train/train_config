@@ -45,13 +45,13 @@
             "method_name": "random_box_shift"
         }
     ],
-    "decay_factor": 0.95,
-    "decay_step": 50000,
+    "decay_factor": 0.9,
+    "decay_step": 30052,
     "gpu_memusage": -1,
     "initial_lr": 0.01,
     "load_dataset_every_N_time": 0,
     "load_dataset_to_mem": true,
-    "max_epoch": 4,
+    "max_epoch": 20,
     "max_steps": -1,
     "num_load_dataset_workers": 16,
     "optimizer": "sgd",
